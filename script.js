@@ -17,7 +17,7 @@ document.getElementById('oddsForm').addEventListener('submit', function(event) {
 
 function AmericanToDecimal(value) {
     var new_value;
-    if (value >= 0) {
+    if (value > 0) {
         new_value = (value / 100) + 1;
     } else if (value < 0) {
         new_value = 1 - (100 / value);
@@ -43,6 +43,9 @@ function Odd_calculator(value1, value2, value3) {
     var bet3 = new_new_value3 * money;
     var totalAmount = bet1 + bet2 + bet3;
 
+    document.getElementById('odds1').style.backgroundColor = 'white'; // Set white background for odds1 input field
+    document.getElementById('odds2').style.backgroundColor = 'white'; // Set white background for odds2 input field
+    document.getElementById('odds3').style.backgroundColor = 'white'; // Set white background for odds3 input field
+
     return [bet1, bet2, bet3, totalAmount];
 }
-
